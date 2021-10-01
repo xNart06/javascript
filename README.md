@@ -1,1 +1,1 @@
-# -renci
+Öğrenci iken yazılan kodlar
