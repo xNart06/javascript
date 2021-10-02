@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>TextContent ve InnerHtml Dersi</title>
+</head>
+    <style>
+/* seçtiğimiz bir etiketin içinde bulunan yazıyı veya içinde bulunan html etiketleri nasıl güncellenir onu öğreneceğiz*/
+    
+    
+    </style>
+<body>
+
+    <h1 id="title" >Lorem ipsum dolor sit amet.</h1>
+
+    <h3 id="sub-title" >Lorem, ipsum dolor.</h3>
+
+    <p>Lorem ipsum dolor, sit <strong>amet</strong> consectetur adipisicing</p>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <img src="photo-1.jpg" width="500">
+
+    <script>
+
+    /*   ********TextContent*********
+    
+    var p = document.getElementsByTagName("p")[0];
+        //index numarasını belirtmezsek p.(fonksiyon) otomatik tanımlamıyor 
+    
+        p.textContent="İçerik değiştirildi";
+        //p etiketinin içeriğini değiştirdik 
+
+        console.log(p);
+
+    console.log(p.textContent);
+
+    var ul = document.querySelector("ul");
+        //liste elemanlarını seçiyoruz
+        ul.textContent="liste";
+        //li içerğini değiştirdik
+    console.log(ul);
+        //liste elemanını konsola yazdırdık
+    console.log(ul.textContent);
+        //liste elemanının içeriğini konsola yazdırdık
+        console.log(document.body.textContent);
+        //saydaki body etikei içersindeki her şeyi konsola yazdırdık
+*/
+   
+
+//            ******InnerHtml*********
+
+var p = document.getElementsByTagName("p")[0];
+
+        p.innerHTML="<b>Burada</b> html etiketleri Text Content'in aksine işe yarar!!";
+
+        /*  ***InnerHTML ve TextContent farkı***
+
+            InnerHTML, TextContent'in aksine html etiketlerini (li ul b strong ...) algılar
+            Fakat TextContent bunları algılayamaz ve sadece içeriği bize verir
+
+        
+        */
+
+    </script>
+</body>
+</html>
