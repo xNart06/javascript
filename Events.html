@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+   <title>Events-Olaylar</title>
+</head>
+<body>
+
+    <h1 id="title" >Lorem ipsum dolor sit amet.</h1>
+
+    <h3 id="sub-title" >Lorem ipsum dolor sit amet.</h3>
+
+    <button id="changeText" >Change</button>
+    <button id="changeText1" >Change</button>
+
+    <p>Lorem, ipsum dolor.Lorem</p>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+
+    <script>        
+        var btn = document.querySelector("#changeText"); // button u tanımladık
+        var p = document.querySelector("p");// paragrafı tanımladık
+
+        btn.addEventListener("click",function(){ //addEventListener ile butona click olayı tanımladık ve bir fonksiyon olşturduk
+            /*console.log(Math.floor(Math.random()*10));*/
+
+            p.textContent="button clicked"; //paragraftaki yazıyı değiştirdik
+
+
+
+        });
+
+        /*burdan*/var h1 = document.querySelector("#title");
+
+        h1.addEventListener("click", renk);
+        
+        function renk(){
+            h1.style.color="red";
+        }; /*buraya*/ //bu sefer fonksiyonu dışarda oluşturup metod içine ekledik
+  
+  
+        var btn1 = document.querySelector("#changeText1");
+
+        btn1.addEventListener("click",renk); // yine farklı bir şekilde h1 etiketinin rengini değiştirdik
+  
+        var ul = document.querySelector("ul");
+
+        ul.addEventListener("click",function(){
+            alert("ul clicked");
+        }); //ul nesnesine tıklandığı zaman ekranda uyarı yazısı çıkıyor
+
+        var lis = document.querySelectorAll("li");
+
+        for(var i=0;i<lis.length;i++){
+            lis[i].addEventListener("click",function(){
+                alert(this.textContent);//this derken burdaki ilk eleman olan i elemanını atıyoruz
+            });
+        };// her li elemanına basıldığında hangi li elemanı içerisinde olduğunu gösterir
+  
+        for(var i=0;i<lis.length;i++){
+            lis[i].addEventListener("click",function(){
+               this.style.color="blue";
+            });
+        };
+  </script>
+</body>
+</html>
