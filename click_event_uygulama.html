@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>event uygulama</title>
+    <style>
+        .kutu{
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            float: left;
+        }
+        #mavi{
+            background-color: blue;
+  
+        }
+        #kirmizi{
+            background-color: red;
+        }
+        #sari{
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="kutu" id="mavi"></div>
+    <div class="kutu" id="kirmizi"></div>
+    <div class="kutu" id="sari"></div>
+</body>
+<script>
+
+   /var mavi = document.querySelector("#mavi");
+
+    mavi.addEventListener("click",function(){
+        this.style.display="none";
+    });
+    sari.addEventListener("click",function(){
+        this.style.display="none";
+    });
+
+    kirmizi.addEventListener("click",function(){
+        this.style.display="none";
+    });
+
+   //Aynı olayı kısaca class değerlerine erişip de yapabilir. Ama tüm kutuları forEach metodu ile dolaşmamız gektiğini de unutmayalım
+</script>
+</html>
