@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+   <title>InnerHtml ve TextContent Uygulaması</title>
+   <style>
+       
+           li{
+               border: 1px solid black;
+               list-style: none;
+               padding: 20px;
+               width: 400px;
+           }
+           li.list-group-item.active{
+               background-color:rgb(94, 174, 248);
+               color: white;
+           }
+           
+           
+   </style>
+
+</head>
+<body>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="list-group">
+
+                 </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        var models = [
+                    { name:'Mazda',selected:false},
+                    { name:'Toyota',selected:false},
+                    { name:'Volvo',selected:true},
+                    { name:'Renault',selected:false},
+                    { name:'Mercedes',selected:false}
+                ];
+
+        var html = document.querySelector(".list-group"); //ul çerisine erişim sağladık
+             
+        models.forEach(function(model){//tüm model dizisini forEach ile ekrana yazdıracağız
+                var li = '';
+
+                if(model.selected){
+                    li = '<li class="list-group-item active">'+model.name+'</li>';
+                }else{
+                    li = '<li class="list-group">'+model.name+'</li>';
+                }
+                
+            html.innerHTML+=li;/*+= elemanı bir arttırarak ilerler. Eğer eşittir deseydi bir önceki elemanı silip sonraki elemanı seçerdi */ //InnerHTML ile ekrana yazı yazdırıyoruz
+        });
+
+
+
+    </script>
+</body>
+</html>
