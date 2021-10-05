@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Taş Kağıt Makas</title>
+</head>
+<body>
+
+    <script>
+        var kullanici = prompt("Taş-Kağıt veya Makas seçiniz");
+
+        
+        var pc = Math.floor(Math.random()*3);
+        //0-2 arası bir değer üretiyor pc
+
+        if(pc==0){
+            pc = "Bilgisayar : taş";
+        }
+        if(pc==1){
+            pc = "Bilgisayar : kağıt";
+        }
+        if(pc==2){
+            pc = "Bilgisayar : makas";
+        };   
+        //pc'nin ürettiği sayıları kelimelere tanımladık
+
+        alert(pc); 
+        
+        if(kullanici=="taş"){
+            if(pc=="Bilgisayar : taş"){
+                alert("   Berabere");}
+            };
+
+            if(kullanici=="taş"){
+            if(pc=="Bilgisayar : makas"){
+                alert("      KUllanıcı kazandı");}
+            };
+
+            if(kullanici=="taş"){
+            if(pc=="Bilgisayar : taş"){
+                alert("      Berabere");}
+            };
+
+            if(kullanici=="kağıt"){
+            if(pc=="Bilgisayar : taş"){
+                alert("      Kullanıcı kazandı");}
+            };
+
+            if(kullanici=="kağıt"){
+            if(pc=="Bilgisayar : makas"){  
+                alert("      Pc kazandı");}
+            };
+
+            if(kullanici=="kağıt"){
+            if(pc=="Bilgisayar : kağıt"){
+                alert("      Berabere");}
+            };
+
+            if(kullanici=="makas"){
+            if(pc=="Bilgisayar : taş"){
+                alert("      Pc Kazandı");}
+            };   
+
+            if(kullanici=="makas"){
+            if(pc=="Bilgisayar : kağıt"){
+                alert("      Kullanıcı Kazandı");}
+            };
+
+            if(kullanici=="makas"){
+            if(pc=="Bilgisayar : makas"){
+                alert("      Berabere");}
+            };
+        
+        
+    </script>
+</body>
+</html>
