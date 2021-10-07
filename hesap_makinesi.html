@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Hesap Makinesi</title>
+    <style>
+        .button_c{
+            position: absolute;
+            left: 469px;
+            top: 251px;
+            height: 45px;
+            width: 290px;
+            font-size: 40px;
+            font-family: serif;
+            padding-top:0;
+            background-color: greenyellow;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+        .button_c:hover{
+            background-color: rgb(189, 98, 231);
+            transition:0.6s;
+        }
+        .sonuc{
+            width: 500px;
+            position: absolute;
+            left: 762px;
+            top: 250px;
+            height: 40px;
+            font-size: 40px;
+            text-align:right;
+            border-radius: 10px;
+            background-color: yellow;
+            color: black;
+        }
+
+        table{
+            border:0 solid black;
+            width: 800px;
+            height: 400px;
+            position: absolute;
+            left: 470px;
+            top: 300px;
+            margin-top: 20px;
+        }
+        .button{
+            height: 100%;
+            width: 100%;
+            font-size: 50px;
+            font-family: serif;
+            background-color: #fff0f5;
+            cursor: pointer;
+            border-radius: 40px;
+            padding: 20px;
+        }
+        .button:hover{
+            background-color: rgb(189, 98, 231);
+            transition:0.6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="çerçeve">
+        <form class="form" name="form" >
+            <tr>
+                <td><input class="button_c" type="button" name="button_c" value="C" onclick="sil()"></td><!--Yazdığımız değerleri daha sonra sileceğimiz bir c butonu koyduk ve sil() diye bir fonksiyon tanımladık-->
+            </tr>
+           <input class="sonuc" name="sonuc"> <!--Tıklanan tuşların ekranda gözükeceği yer-->
+        </form>
+        
+    <table>
+       <tr>
+           <td><input class="button" type="button" value="7" onclick="insert(7)" ></td>
+           <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+           <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+           <td><input class="button" type="button" value="+" onclick="insert('+')"></td><!--ifadeleri yazarken '' içerisinde yazıyoruz-->
+       </tr>
+       <tr>
+           <td><input class="button" type="button" value="4" onclick="insert(4)" ></td>
+           <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+           <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+           <td><input class="button" type="button" value="-" onclick="insert('-')"></td><!--ifadeleri yazarken '' içerisinde yazıyoruz-->
+       </tr>
+       <tr>
+        <td><input class="button" type="button" value="1" onclick="insert(1)" ></td>
+        <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+        <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+        <td><input class="button" type="button" value="÷" onclick="insert('÷')"></td><!--ifadeleri yazarken '' içerisinde yazıyoruz-->
+    </tr>
+    <tr>
+        <td><input class="button" type="button" value="0" onclick="insert(0)" ></td>
+        <td><input class="button" type="button" value="." onclick="insert('.')"></td> <!--ifadeleri yazarken '' içerisinde yazıyoruz-->
+        <td><input class="button" type="button" value="=" onclick="sonuc()"></td>
+        <td><input class="button" type="button" value="x" onclick="insert('x')"></td>
+    </tr>
+    </table>
+    <script>
+        function insert(number){
+           document.form.sonuc.value = document.form.sonuc.value+number;
+       }//tuşlara basıp ekrana yazdırdık
+
+       function sonuc(){
+           
+           //sonuçları hesaplayıp ekrana yazacak olan yer
+       };
+    
+       function sil(){
+            document.form.sonuc.value = document.form.sonuc.value=""; // ekrandaki sayıları sildik
+       };
+       
+    </script>
+</body>
+</html>
