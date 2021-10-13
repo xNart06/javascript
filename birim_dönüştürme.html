@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Birim dönüştürme</title>
+</head>
+<body>
+    <script>
+        var x, mil_d, cm_d;
+
+        prompt("Lütfen bir ifade seçiniz: \n 1:  metre-sanimetre dönüştürme  \n 2:   mil-metre dönüştürme");
+
+        x = prompt("Değeri giriniz:");
+
+        mil_d = x*1609+" "+"m";
+
+        cm_d = x*100+" "+"cm";
+
+        if(x==1){
+            alert(cm_d);
+        }
+        if(x==2){
+            alert(mil_d);
+        }
+
+    </script>
+</body>
+</html>
