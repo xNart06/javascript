@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sayı tutuma oyunu</title>
+</head>
+<body>
+    <script>
+
+        var pc, kullanici;
+
+        kullanici = prompt("1 ile 10 arasında bir sayı girinzi");
+
+        pc = Math.floor(Math.random()*10);
+        
+        alert("Bilgisayar: "+pc);
+        
+        if (kullanici == pc){
+            alert("Doğru Bildiniz");
+        }
+        else{
+            alert("Bilemediniz!!!!");
+        }
+
+    </script>
+</body>
+</html>
